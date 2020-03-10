@@ -8,6 +8,7 @@ class ImageModel(models.Model):
     image_name = models.CharField(max_length=30)
     image_caption = models.CharField(max_length=200)
     image_comments = models.CharField(max_length=300)
+    profile = models.ForeignKey(ProfileModel, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.image_caption
@@ -15,7 +16,12 @@ class ImageModel(models.Model):
 
 class ProfileModel(models.Model):
     profile_pic = models.ImageField(upload_to="media/")
+    profile_username = models.CharField(max_length=30)
+    profile_userpassword = models.CharField(max_length=20)
     profile_bio = models.CharField(max_length=400)
+
+    def __str__(self):
+        return self.profile_username
 
 
 """
