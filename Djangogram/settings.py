@@ -133,6 +133,24 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
+## Auth0
+SOCIAL_AUTH_TRAILING_SLASH = False  # Remove trailing slash from routes
+SOCIAL_AUTH_AUTH0_DOMAIN = "dev-b6bwkvyt.auth0.com"
+SOCIAL_AUTH_AUTH0_KEY = "HIZTOY8NsNf3Z3nLqKhaiYaTLIyiRiZQ"
+SOCIAL_AUTH_AUTH0_SECRET = (
+    "CCZlQqQgW5KpusP2TtD-kI1mRSOZataKXeu7Za5TotZsXv2jPSgXNZVmgl9I4tz4"
+)
+
+SOCIAL_AUTH_AUTH0_SCOPE = ["openid", "profile", "email"]
+
+AUTHENTICATION_BACKENDS = {
+    "insta.auth0backend.Auth0",
+    "django.contrib.auth.backends.ModelBackend",
+}
+
+LOGIN_URL = "/login/auth0"
+LOGIN_REDIRECT_URL = "/dashboard"
+
 # cloudinary
 cloudinary.config(
     cloud_name="dit0fii18",
