@@ -83,7 +83,7 @@ WSGI_APPLICATION = "Djangogram.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "djangogram",
+        "NAME": "djangogram_app",
         "USER": "loisa",
         "PASSWORD": "kitloisa15",
     }
