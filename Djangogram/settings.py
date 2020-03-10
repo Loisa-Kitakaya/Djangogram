@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -38,10 +42,12 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "insta",
+    "cloudinary",
 ]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -82,7 +88,8 @@ DATABASES = {
         "PASSWORD": "kitloisa15",
     }
 }
-
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES["default"].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -115,7 +122,19 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = "/static/"
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+# Extra places for collectstatic to find static files.
+STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "statics"),
-]
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+# media
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+# cloudinary
+cloudinary.config(
+    cloud_name="dit0fii18",
+    api_key="488158286488541",
+    api_secret="15AEbpxsXhNF828AaNQtQy7iOR0",
+)
