@@ -1,83 +1,16 @@
-<!-- load static -->
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- favicon -->
-    <link
-      rel="shortcut icon"
-      type="image/png"
-      href="{% static 'images/favicon.ico' %}"
-    />
-    <!-- jquery cdn -->
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"
-    ></script>
-    <!-- local js file -->
-    <script src="{% static 'main.js' %}"></script>
-    <!-- bootstrap cdn -->
-    <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
-    <!-- google fonts cdn -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Trade+Winds&display=swap"
-      rel="stylesheet"
-    />
-    <!-- local css files -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{% static 'compstyles.css' %}"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen and (max-width: 600px)"
-      href="{% static 'phonestyles.css' %}"
-    />
-    <title>Djangogram</title>
-  </head>
-  <body id="main">
-    <!-- navigation bar -->
-    <nav>
-      <!-- left -->
-      <h1>Djangogram</h1>
-      <!-- right -->
-      <div class="navigation_bar">
-        <form action="" method="GET" class="form-group gram_form">
-          <input
-            type="text"
-            class="search_bar form-control"
-            placeholder="&#128270; search..."
-            id="search"
-            name="search"
-          />
-        </form>
-      </div>
-      <span class="menu-btn">&#9776;</span>
-    </nav>
-
-    <!-- hidden side menu -->
-    <div class="side_menu" id="mySidenav">
-      <span class="close-btn">&#10005;</span>
-      <a href="#">home</a>
-      <a href="#">explore</a>
-      <a href="#">likes</a>
-      <a href="#">profile</a>
-    </div>
-
-    <!-- main page -->
-    {% block body %}
-
-    <!-- end of block -->
-    {% endblock %}
-  </body>
-</html>
+{% include 'layout/base.html' %}
+{% block styles %}
+<style>
+    .hovercard:hover {
+        opacity: 0.7
+    }
+</style>
+{% endblock %}
+{% block content %}
+<div class="text-center">
+    <a href="{% url 'post' %}">
+        <input type="button" class="btn btn-outline-secondary" value="Post">
+    </a>
+</div>
+{% include 'shared/sharedpost.html' %}
+{% endblock %}
