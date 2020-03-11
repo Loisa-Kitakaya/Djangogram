@@ -11,9 +11,6 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-import cloudinary
-import cloudinary.uploader
-import cloudinary.api
 import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -42,7 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "insta",
-    "cloudinary",
+    "widget_tweaks",
 ]
 
 MIDDLEWARE = [
@@ -132,9 +129,6 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
-# cloudinary
-cloudinary.config(
-    cloud_name="dit0fii18",
-    api_key="488158286488541",
-    api_secret="15AEbpxsXhNF828AaNQtQy7iOR0",
-)
+LOGOUT_REDIRECT_URL = 'home_page'
+LOGIN_REDIRECT_URL = 'home_page'
+
