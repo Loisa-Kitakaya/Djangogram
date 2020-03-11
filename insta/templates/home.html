@@ -1,0 +1,118 @@
+{% extends 'index.html' %}
+
+<!-- load static files -->
+{% load static %}
+
+<!-- beginning of body block -->
+{% block body %}
+
+<div class="container home-page">
+  <!-- fixed side menu (not hidden) -->
+  <div class="fixed-menu">
+    <!-- user profile -->
+    <div id="user_profile">
+      <p style="padding: 0; margin: 0;">
+        logged in as: *****
+      </p>
+    </div>
+    <!-- stories -->
+    <div class="fixed-menu_elem card" id="stories">
+      <h6>Stories</h6>
+      <div class="overflow_items">
+        <ul>
+          <li>story</li>
+          <li>story</li>
+          <li>story</li>
+          <li>story</li>
+          <li>story</li>
+          <li>story</li>
+          <li>story</li>
+          <li>story</li>
+          <li>story</li>
+          <li>story</li>
+          <li>story</li>
+          <li>story</li>
+          <li>story</li>
+          <li>story</li>
+        </ul>
+      </div>
+    </div>
+    <!-- suggestions -->
+    <div class="fixed-menu_elem card" id="suggestions">
+      <h6>Suggestions</h6>
+      <div class="overflow_items">
+        <ul>
+          <li>suggestion</li>
+          <li>suggestion</li>
+          <li>suggestion</li>
+          <li>suggestion</li>
+          <li>suggestion</li>
+          <li>suggestion</li>
+          <li>suggestion</li>
+          <li>suggestion</li>
+          <li>suggestion</li>
+          <li>suggestion</li>
+          <li>suggestion</li>
+          <li>suggestion</li>
+          <li>suggestion</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- scroll content -->
+  <div class="content">
+    <!-- * -->
+
+    <!-- image container -->
+    <div class="card-body">
+      <!-- user icon -->
+      <div class="card card_with-menu">
+        <a href="#" class="card-to-left-elements"
+          ><img
+            src="https://cdn3.iconfinder.com/data/icons/vector-icons-6/96/256-512.png"
+            class="profile-icon_image"
+            alt="profile icon"
+        /></a>
+        <a href="#" class="card-to-right-elements"
+          ><img
+            src="https://cdn3.iconfinder.com/data/icons/player/128/sound-05-512.png"
+            class="icon_image"
+            alt="profile icon"
+        /></a>
+      </div>
+      <!-- posted image -->
+      <img
+        src="https://images.pexels.com/photos/586744/pexels-photo-586744.jpeg?cs=srgb&dl=abstract-art-background-blur-586744.jpg&fm=jpg"
+        alt="posted image"
+      />
+      <!-- comments and likes -->
+      <div class="card">
+        <span class="card-to-left-elements"
+          ><img
+            class="like-icon_image"
+            src="https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/heart-512.png"
+            alt="like icon image"
+          />
+          <span>41</span></span
+        >
+        <hr />
+        <p>
+          comments
+        </p>
+        <div class="comments">
+          <p id="comment_id_left">
+            User: *****
+          </p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          </p>
+        </div>
+        <hr />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- end of body block -->
+{% endblock %}

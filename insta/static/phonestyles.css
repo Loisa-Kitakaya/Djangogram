@@ -1,0 +1,30 @@
+/* phone styling */
+nav h1 {
+  display: none;
+}
+
+#stories,
+#suggestions,
+#user_profile,
+.fixed-menu {
+  display: none;
+}
+
+.side_menu {
+  width: 100%;
+}
+
+.close-btn {
+  display: none;
+}
+
+.content {
+  width: 100%;
+  margin: 0;
+}
+
+.card-body {
+  margin: 0;
+  width: 100%;
+  margin-bottom: 1rem;
+}

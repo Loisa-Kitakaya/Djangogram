@@ -1,0 +1,189 @@
+/* body styling */
+body {
+  background-color: #fafafa;
+}
+
+/* navbar and hidden side menu styling */
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0;
+  padding-top: 1rem;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border-bottom: 1px solid rgb(197, 197, 197);
+  box-shadow: 0px 0px 3px 0px rgba(102, 102, 102, 0.726);
+  z-index: 1;
+}
+
+nav h1 {
+  font-family: "Trade Winds", cursive;
+}
+
+.menu-btn {
+  position: fixed;
+  top: 1.5rem;
+  left: 2rem;
+  cursor: pointer;
+}
+
+.close-btn {
+  position: fixed;
+  top: 5rem;
+  left: 10rem;
+  cursor: pointer;
+  color: white;
+  transition: 200ms;
+}
+
+.side_menu {
+  height: 100%;
+  width: 14.75%;
+  position: fixed;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-evenly;
+  background-color: #8f8f8fd8;
+  z-index: 1;
+}
+
+.side_menu a {
+  text-decoration: none;
+  color: whitesmoke;
+  display: block;
+  padding: 10px 6px 10px 6px;
+  transition: 300ms;
+}
+
+.side_menu a:hover {
+  background-color: #fafafa;
+  color: black;
+  font-size: larger;
+}
+
+/* main content styling */
+.home-page {
+  margin-top: 4.5rem;
+  padding: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+.fixed-menu {
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  right: 8rem;
+  position: fixed;
+}
+
+.fixed-menu_elem {
+  border: 1px solid #949494b6;
+  border-radius: 5px;
+  margin-top: 2rem;
+  background-color: white;
+  height: 200px;
+}
+
+#user_profile {
+  border: 1px solid #3c3c3c;
+  border-radius: 5px;
+  margin-top: 2rem;
+  background-color: white;
+}
+
+h6 {
+  position: absolute;
+  background-color: #3c3c3c;
+  z-index: 1;
+  width: 100%;
+  color: whitesmoke;
+}
+
+.overflow_items {
+  overflow: auto;
+  margin-top: 2rem;
+}
+
+.overflow_items ul {
+  list-style: none;
+  text-align: left;
+}
+
+.overflow_items ul li {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.content {
+  margin: 0;
+  padding: 0;
+  width: 60%;
+  margin-left: 5rem;
+}
+
+.card-body {
+  margin-left: 0.75rem;
+  margin-bottom: 1rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+}
+
+.card-body img {
+  height: 1000px;
+  width: auto;
+  /* padding-left: 10px; */
+}
+
+.card-to-left-elements {
+  text-align: left;
+  margin: 1rem;
+}
+
+.card-to-right-elements {
+  text-align: right;
+  margin: 1rem;
+}
+
+.comments {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  overflow: auto;
+  height: 250px;
+  text-align: left;
+  background-color: #f1f3f4;
+  margin: 0;
+  padding: 0;
+}
+
+.card-body .card img {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+}
+
+.card_with-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.like-icon_image {
+  cursor: pointer;
+}
+
+#comment_id_left {
+  text-align: left;
+  margin-left: 1rem;
+}
+
+/* signup form */
